@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            /* display : none; */
+            display : flex;
+        }
+        video {
+            display: none;
+        }
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+    <script defer src="{{ url_for('static', filename='app.js') }}"></script>
+</head>
+<body>
+    <!-- <h1>This is a video stream</h1> -->
+    <div class="container">
+        <video autoplay="true" id="VideoElement"></video>
+        <canvas id="Canvas"></canvas>
+        <img id="output" alt="output"/>
+    </div>
+</body>
+</html>
